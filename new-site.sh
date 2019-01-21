@@ -9,12 +9,17 @@
 # --------------------------------------------------------------
 
 echo "Informe o nome do arquivo de configuração (exemplo.conf)"
+# dialog --inputbox "Informe o nome do arquivo de configuração (exemplo.conf)" 10 50
 read filename;
 
+# echo filename;
+
 echo "Informe o server-name:"
+# dialog --inputbox "Informe o server-name" 10 50
 read server_name;
 
 echo "Informe o diretório público do site:"
+# dialog --inputbox "Informe o diretório público do site" 10 50
 read public_directory;
 
 echo "Deseja ativar o site agora? (s ou n)"
@@ -29,7 +34,7 @@ cat > "/etc/apache2/sites-available/"$filename << EOF
 
 	ServerName $server_name 
 	ServerAdmin dev@elieldepaula.com.br
-	DocumentRoot /home/elieldepaula/Sites/VIRTUALHOSTS/$public_directory
+	DocumentRoot /home/elieldepaula/Sites/$public_directory
 	ErrorLog ${APACHE_LOG_DIR}/error.log
 	CustomLog ${APACHE_LOG_DIR}/access.log combined
 
