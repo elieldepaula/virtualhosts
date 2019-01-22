@@ -55,7 +55,7 @@ then
 
   service apache2 restart
 
-  echo "Site criado com sucesso.";
+  echo "Site criado com sucesso!";
 
   echo " ";
 
