@@ -25,7 +25,9 @@ read public_directory;
 echo "Deseja ativar o site agora? (s ou n)"
 read enable_site;
 
+# --------------------------------------------------------------
 # Processa a criação do arquivo do apache.
+# --------------------------------------------------------------
 
 cat > "/etc/apache2/sites-available/"$filename << EOF
 <VirtualHost *:80>
