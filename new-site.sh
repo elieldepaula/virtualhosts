@@ -65,3 +65,4 @@ else
   echo "Encerrando o script.";
 fi
 
+# Fim.
